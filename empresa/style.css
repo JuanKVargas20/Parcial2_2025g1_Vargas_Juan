@@ -1,0 +1,165 @@
+/* ==== PALETA DE COLORES ==== */
+:root {
+  --forest: #1b5e20;      /* Verde bosque */
+  --lime: #76ff03;        /* Verde lima brillante */
+  --blue: #0288d1;        /* Azul río */
+  --danger: #e53935;      /* Rojo natural */
+  --light-forest: #f1f8e9;/* Verde claro de fondo */
+}
+
+/* ==== ESTILOS GLOBALES ==== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+/* ==== NAVBAR ==== */
+.bg-forest {
+  background-color: var(--forest) !important;
+}
+.text-lime {
+  color: var(--lime) !important;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--lime) !important;
+}
+
+/* ==== SECCIONES ==== */
+.text-forest { color: var(--forest) !important; }
+.text-blue { color: var(--blue) !important; }
+.text-danger { color: var(--danger) !important; }
+.text-lime { color: var(--lime) !important; }
+
+.bg-light-forest {
+  background-color: var(--light-forest) !important;
+}
+
+.border-forest { border-top: 3px solid var(--forest) !important; }
+.border-lime   { border-top: 3px solid var(--lime) !important; }
+.border-blue   { border-top: 3px solid var(--blue) !important; }
+.border-danger { border-top: 3px solid var(--danger) !important; }
+
+/* ==== BOTONES ==== */
+.btn-forest {
+  background-color: var(--forest);
+  color: #fff;
+}
+.btn-forest:hover {
+  background-color: #145214;
+  color: #fff;
+}
+
+.btn-blue {
+  background-color: var(--blue);
+  color: #fff;
+}
+.btn-blue:hover {
+  background-color: #01579b;
+  color: #fff;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: var(--forest);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ==== CARDS ==== */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ==== ICONOS ==== */
+i {
+  transition: transform 0.3s ease;
+}
+i:hover {
+  transform: scale(1.2);
+}
+
+/* ==== CARRUSEL (general) ==== */
+.carousel-inner img {
+  border-radius: 8px;
+}
+
+/* ==== HERO (imagen de fondo index) ==== */
+.hero {
+  background: url("https://blog.redbus.co/wp-content/uploads/2024/09/caqueta-1.jpg") 
+              no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero h1, 
+.hero p, 
+.hero .btn {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==== SOLO PARA SERVICIOS ==== */
+body.servicios-page .service-img-servicios {
+  height: 240px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+body.servicios-page .carousel-img-servicios {
+  height: 420px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+/* ==== UNIFICAR TAMAÑOS DE TODAS LAS IMÁGENES ==== */
+.card img,
+.service-img-servicios {
+  height: 240px !important;   /* mismo alto para todas las cards */
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.carousel-inner img,
+.carousel-img-servicios {
+  height: 420px !important;   /* mismo alto para todas las del carrusel */
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  border-radius: 8px;
+}
